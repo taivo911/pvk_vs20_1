@@ -9,6 +9,6 @@ class Pages
      */
     public function __construct()
     {
-        echo 'Pages class is loaded<br>';
+        echo 'pages class is loaded<br>';
     }
 }

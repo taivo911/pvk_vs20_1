@@ -2,10 +2,11 @@
 
 
 class Core
-{// get url data
+{
     protected $currentController = 'Pages';
     protected $currentMethod = 'index';
     protected $params = [];
+// get url data
     /**
      * Core constructor.
      */
@@ -13,7 +14,7 @@ class Core
     {
         $url = $this->getUrl();
         $controllerName = ucwords($url[0]);
-        $controllerFile = '../app/controlles/'.$controllerName.'.php';
+        $controllerFile = '../app/controllers/'.$controllerName.'.php';
         if(file_exists($controllerFile)){
             $this->currentController = $controllerName;
             unset($url[0]);
@@ -25,7 +26,7 @@ class Core
     }
 
     public function getUrl(){
-        if(isset($_GET['url'])){
+        if(isset($_GET['url'])) {
             $url = $_GET['url'];
             $url = rtrim($url, '/');
             $url = htmlentities($url);
