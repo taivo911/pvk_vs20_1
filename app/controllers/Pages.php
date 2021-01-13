@@ -18,12 +18,12 @@ class Pages extends Controller
             'title' => 'Welcome to pages',
             'content' => 'Pages index view is loaded'
         );
-        $this->view('pages/index', $data);
+        $this->view('pages/index/', $data);
     }
 
     public function about(){
         //echo 'about method is loaded<br>';
         $data = array('content' => 'Pages about view is loaded by MVC');
-        $this->view('pages/about', $data);
+        $this->view('pages/about/', $data);
     }
 }
